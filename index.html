@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Whitfield Plumbing &amp; Heating | Ashcombe</title>
+<meta name="description" content="Family-run plumbing and heating engineers in Ashcombe. Boiler repair, installations, emergency callouts, bathrooms and central heating. Call 01632 960123.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#26241f;
+    --ink-soft:#4a463d;
+    --cream:#f5efe2;
+    --paper:#fbf7ee;
+    --paper-alt:#efe6d3;
+    --copper:#b5652d;
+    --copper-dark:#8a4b1f;
+    --forest:#2f4438;
+    --forest-deep:#233329;
+    --line:#ddd0b2;
+    --gold-star:#c9862c;
+    --white:#fffdf8;
+    --radius:3px;
+    --shadow:0 1px 2px rgba(38,36,31,0.06), 0 6px 18px -8px rgba(38,36,31,0.18);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', Georgia, 'Times New Roman', serif;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.15;
+    margin:0 0 .5em;
+    letter-spacing:-0.01em;
+  }
+
+  p{margin:0 0 1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Disclosure banner ---------- */
+  .disclosure{
+    background:var(--forest-deep);
+    color:#e9e2cd;
+    font-family:'Work Sans', sans-serif;
+    font-size:0.8rem;
+    letter-spacing:.01em;
+    text-align:center;
+    padding:9px 16px;
+    border-bottom:1px solid #1b2820;
+  }
+  .disclosure strong{color:var(--white);font-weight:600;}
+  .disclosure .dot{color:var(--copper);margin:0 .5em;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:50;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 24px;
+    gap:24px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+  }
+  .brand-mark{
+    width:44px;height:44px;
+    flex:none;
+    border-radius:50%;
+    background:var(--forest);
+    color:var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.1rem;
+    border:2px solid var(--copper);
+  }
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;}
+  .brand-text .name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.18rem;
+    color:var(--ink);
+  }
+  .brand-text .tag{
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.09em;
+    color:var(--copper-dark);
+    font-weight:600;
+    margin-top:2px;
+  }
+  nav.primary{display:flex;align-items:center;gap:28px;}
+  nav.primary a{
+    text-decoration:none;
+    color:var(--ink-soft);
+    font-size:.94rem;
+    font-weight:500;
+    padding:4px 2px;
+    border-bottom:2px solid transparent;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  nav.primary a:hover{color:var(--copper-dark);border-color:var(--copper);}
+  .header-cta{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .phone-pill{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    text-decoration:none;
+    line-height:1.15;
+  }
+  .phone-pill .label{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);}
+  .phone-pill .num{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--copper-dark);}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:11px 22px;
+    background:var(--copper);
+    color:var(--white);
+    text-decoration:none;
+    font-weight:600;
+    font-size:.92rem;
+    border-radius:var(--radius);
+    border:1px solid var(--copper-dark);
+    box-shadow:var(--shadow);
+    transition:background .15s ease, transform .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{background:var(--copper-dark);transform:translateY(-1px);}
+  .btn.ghost{
+    background:transparent;
+    color:var(--forest);
+    border:1px solid var(--forest);
+    box-shadow:none;
+  }
+  .btn.ghost:hover{background:var(--forest);color:var(--white);}
+  .btn.on-dark{background:var(--copper);border-color:#e0a870;}
+
+  .menu-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at 85% -10%, rgba(181,101,45,0.18), transparent 55%),
+      var(--forest);
+    color:var(--cream);
+    position:relative;
+    overflow:hidden;
+    border-bottom:6px solid var(--copper);
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:48px;
+    align-items:center;
+    padding:76px 24px 64px;
+  }
+  .hero .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:.76rem;
+    text-transform:uppercase;
+    letter-spacing:.12em;
+    font-weight:600;
+    color:#e2c9a2;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.18);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2.2rem, 4.2vw, 3.4rem);
+    max-width:14ch;
+  }
+  .hero .lede{
+    color:#d9d0b9;
+    font-size:1.12rem;
+    max-width:46ch;
+    margin-bottom:28px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px;}
+  .hero-stats{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    border-top:1px solid rgba(255,255,255,0.16);
+    padding-top:24px;
+  }
+  .hero-stats div{display:flex;flex-direction:column;}
+  .hero-stats .num{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;color:var(--white);}
+  .hero-stats .lbl{font-size:.76rem;color:#c9bfa4;text-transform:uppercase;letter-spacing:.06em;margin-top:2px;}
+
+  .hero-plate{
+    background:var(--paper);
+    color:var(--ink);
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+    box-shadow:0 20px 40px -18px rgba(0,0,0,0.45);
+    padding:28px;
+    position:relative;
+  }
+  .hero-plate::before{
+    content:"";
+    position:absolute;
+    inset:8px;
+    border:1px solid var(--line);
+    pointer-events:none;
+  }
+  .hero-plate h3{font-size:1.05rem;margin-bottom:14px;}
+  .plate-row{
+    display:flex;
+    justify-content:space-between;
+    gap:12px;
+    padding:10px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:.92rem;
+  }
+  .plate-row:last-of-type{border-bottom:none;}
+  .plate-row .k{color:var(--ink-soft);}
+  .plate-row .v{font-weight:600;text-align:right;}
+  .plate-cta{margin-top:18px;}
+
+  /* ---------- Section shells ---------- */
+  section{padding:76px 0;}
+  .section-head{max-width:640px;margin:0 auto 44px;text-align:center;}
+  .section-head .kicker{
+    display:block;
+    font-size:.76rem;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-weight:700;
+    color:var(--copper-dark);
+    margin-bottom:10px;
+  }
+  .section-head h2{font-size:clamp(1.6rem,3vw,2.2rem);}
+  .section-head p{color:var(--ink-soft);font-size:1.02rem;}
+  .alt-bg{background:var(--paper-alt);}
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+  }
+  .service-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:28px 24px;
+    position:relative;
+    box-shadow:var(--shadow);
+  }
+  .service-card .idx{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:.85rem;
+    color:var(--copper);
+    border:1px solid var(--copper);
+    width:30px;height:30px;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+  }
+  .service-card h3{font-size:1.08rem;margin-bottom:8px;}
+  .service-card p{color:var(--ink-soft);font-size:.92rem;margin-bottom:0;}
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:56px;
+    align-items:center;
+  }
+  .about-media{
+    background:linear-gradient(155deg, var(--forest) 0%, var(--forest-deep) 100%);
+    border-radius:var(--radius);
+    min-height:340px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+    padding:26px;
+    border:1px solid var(--forest-deep);
+  }
+  .about-media::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.035) 0 2px, transparent 2px 26px);
+  }
+  .about-media .tag-plate{
+    position:relative;
+    background:rgba(251,247,238,0.96);
+    color:var(--ink);
+    padding:16px 18px;
+    border-radius:var(--radius);
+    max-width:280px;
+    box-shadow:var(--shadow);
+  }
+  .about-media .tag-plate .who{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;margin-bottom:2px;}
+  .about-media .tag-plate .role{font-size:.8rem;color:var(--ink-soft);}
+  .about-copy h2{margin-bottom:18px;}
+  .about-copy p{color:var(--ink-soft);font-size:1.02rem;}
+  .about-facts{
+    list-style:none;
+    margin:22px 0 0;
+    padding:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px 20px;
+  }
+  .about-facts li{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    font-size:.92rem;
+    color:var(--ink-soft);
+  }
+  .about-facts li::before{
+    content:"";
+    flex:none;
+    width:8px;height:8px;
+    margin-top:6px;
+    background:var(--copper);
+    transform:rotate(45deg);
+  }
+  .about-facts li strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- Reviews ---------- */
+  .reviews-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+  .review-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+    box-shadow:var(--shadow);
+    display:flex;
+    flex-direction:column;
+  }
+  .stars{color:var(--gold-star);font-size:.95rem;letter-spacing:2px;margin-bottom:14px;}
+  .review-card p.quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    color:var(--ink);
+    font-size:1.02rem;
+    flex:1;
+    margin-bottom:18px;
+  }
+  .review-who{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+    padding-top:12px;
+  }
+  .review-who strong{color:var(--ink);font-weight:600;}
+
+  /* ---------- Hours + contact ---------- */
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:0;
+    background:var(--forest);
+    color:var(--cream);
+    border-radius:var(--radius);
+    overflow:hidden;
+    border:1px solid var(--forest-deep);
+  }
+  .contact-col{padding:44px 40px;}
+  .contact-col.hours{border-right:1px solid rgba(255,255,255,0.14);}
+  .contact-grid h3{color:var(--white);font-size:1.2rem;margin-bottom:20px;}
+  .hours-list{list-style:none;margin:0;padding:0;}
+  .hours-list li{
+    display:flex;
+    justify-content:space-between;
+    padding:9px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    font-size:.94rem;
+    color:#d9d0b9;
+  }
+  .hours-list li:last-child{border-bottom:none;}
+  .hours-list li strong{color:var(--white);font-weight:500;}
+  .hours-note{
+    margin-top:16px;
+    font-size:.86rem;
+    color:#e2c9a2;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.14);
+    padding:12px 14px;
+    border-radius:var(--radius);
+  }
+  .contact-details p{font-size:.94rem;color:#d9d0b9;margin-bottom:16px;}
+  .contact-line{
+    display:flex;
+    gap:12px;
+    margin-bottom:16px;
+    font-size:.96rem;
+  }
+  .contact-line .k{
+    flex:none;
+    width:76px;
+    text-transform:uppercase;
+    font-size:.72rem;
+    letter-spacing:.08em;
+    color:#c9bfa4;
+    padding-top:3px;
+  }
+  .contact-line a{color:var(--white);text-decoration:none;font-weight:600;}
+  .contact-line a:hover{color:var(--copper);}
+  .contact-col .btn{margin-top:8px;}
+
+  /* ---------- CTA strip ---------- */
+  .cta-strip{
+    text-align:center;
+    padding:64px 24px;
+  }
+  .cta-strip h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px;}
+  .cta-strip p{color:var(--ink-soft);max-width:52ch;margin:0 auto 26px;}
+  .cta-strip .btn{padding:14px 30px;font-size:1rem;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--forest-deep);
+    color:#c9bfa4;
+    padding:40px 24px 26px;
+    font-size:.86rem;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:24px;
+    flex-wrap:wrap;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    padding-bottom:24px;
+    margin-bottom:18px;
+  }
+  .footer-brand{font-family:'Fraunces',serif;color:var(--white);font-size:1.05rem;font-weight:600;margin-bottom:6px;}
+  .footer-cols{display:flex;gap:56px;flex-wrap:wrap;}
+  .footer-col h4{
+    color:#e2c9a2;
+    font-size:.74rem;
+    text-transform:uppercase;
+    letter-spacing:.09em;
+    margin-bottom:12px;
+    font-family:'Work Sans',sans-serif;
+    font-weight:600;
+  }
+  .footer-col a{display:block;color:#c9bfa4;text-decoration:none;margin-bottom:8px;font-size:.88rem;}
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    font-size:.8rem;
+    color:#9c9482;
+  }
+  .footer-bottom .stride-credit{color:#c9bfa4;}
+  .footer-bottom .stride-credit a{color:#e2c9a2;text-decoration:none;font-weight:600;}
+  .footer-bottom .stride-credit a:hover{text-decoration:underline;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;padding:56px 24px 44px;}
+    .services-grid{grid-template-columns:repeat(2,1fr);}
+    .about-grid{grid-template-columns:1fr;}
+    .about-media{min-height:240px;}
+    .reviews-grid{grid-template-columns:1fr;}
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-col.hours{border-right:none;border-bottom:1px solid rgba(255,255,255,0.14);}
+    nav.primary{display:none;}
+  }
+  @media (max-width:600px){
+    .services-grid{grid-template-columns:1fr;}
+    .header-inner{padding:14px 18px;}
+    .phone-pill{display:none;}
+    section{padding:56px 0;}
+    .footer-inner{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="disclosure">
+    <strong>Example build</strong><span class="dot">&bull;</span>shown to demonstrate what STRIDE can create<span class="dot">&bull;</span>Not a real business
+  </div>
+
+  <header class="site">
+    <div class="header-inner wrap">
+      <a href="#top" class="brand">
+        <span class="brand-mark">W</span>
+        <span class="brand-text">
+          <span class="name">Whitfield Plumbing &amp; Heating</span>
+          <span class="tag">Ashcombe, est. 1994</span>
+        </span>
+      </a>
+      <nav class="primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Hours &amp; Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="phone-pill" href="tel:01632960123">
+          <span class="label">Call the team</span>
+          <span class="num">01632 960123</span>
+        </a>
+        <a class="btn" href="tel:01632960123">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner wrap">
+        <div>
+          <span class="eyebrow">Family-run since 1994</span>
+          <h1>Trusted plumbing &amp; heating, done properly the first time.</h1>
+          <p class="lede">Whitfield Plumbing &amp; Heating has kept the boilers, bathrooms and pipework of Ashcombe running for over thirty years — straightforward advice, tidy work, and a real person who answers the phone.</p>
+          <div class="hero-actions">
+            <a class="btn" href="tel:01632960123">Call 01632 960123</a>
+            <a class="btn ghost" href="#contact">Request a callback</a>
+          </div>
+          <div class="hero-stats">
+            <div><span class="num">30+</span><span class="lbl">Years trading</span></div>
+            <div><span class="num">24/7</span><span class="lbl">Emergency line</span></div>
+            <div><span class="num">3</span><span class="lbl">Generations of know-how</span></div>
+          </div>
+        </div>
+        <div class="hero-plate">
+          <h3>Callout at a glance</h3>
+          <div class="plate-row"><span class="k">Coverage area</span><span class="v">Ashcombe &amp; nearby villages</span></div>
+          <div class="plate-row"><span class="k">Emergency response</span><span class="v">Same-day, most jobs</span></div>
+          <div class="plate-row"><span class="k">Quotes</span><span class="v">Free, no obligation</span></div>
+          <div class="plate-row"><span class="k">Gas Safe engineers</span><span class="v">Yes</span></div>
+          <a class="btn plate-cta" href="tel:01632960123" style="width:100%;justify-content:center;">Speak to Whitfield&rsquo;s now</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">What we do</span>
+          <h2>Four trades, one reliable team</h2>
+          <p>From a dripping tap to a full heating install, we keep it in the family rather than passing you between subcontractors.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="idx">01</div>
+            <h3>Boiler Repair &amp; Installation</h3>
+            <p>Fault-finding, repairs and full replacements on most major boiler brands, with honest advice on repair versus replace.</p>
+          </div>
+          <div class="service-card">
+            <div class="idx">02</div>
+            <h3>Emergency Callouts</h3>
+            <p>Burst pipes, no heat, no hot water — we prioritise emergencies and aim to have someone with you the same day.</p>
+          </div>
+          <div class="service-card">
+            <div class="idx">03</div>
+            <h3>Bathroom Plumbing</h3>
+            <p>New bathroom installs, leak repairs, shower and tap fitting, and re-plumbing work carried out cleanly and carefully.</p>
+          </div>
+          <div class="service-card">
+            <div class="idx">04</div>
+            <h3>Central Heating</h3>
+            <p>System design, power flushing, radiator installs and full central heating upgrades for warmer, more efficient homes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-bg" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="about-media">
+            <div class="tag-plate">
+              <div class="who">Ray Whitfield, Founder</div>
+              <div class="role">Started the firm on Foundry Lane in 1994</div>
+            </div>
+          </div>
+          <div class="about-copy">
+            <h2>A family firm that still answers its own phone</h2>
+            <p>Whitfield Plumbing &amp; Heating was founded in 1994 by Ray Whitfield, working out of a van and a small workshop on Foundry Lane. Today the business is run day-to-day by his son Danny, with the same approach Ray started with: turn up when you say you will, explain the job in plain English, and charge a fair price for it.</p>
+            <p>Over thirty years on, we're still based in Ashcombe, still family-run, and still doing the unglamorous work that keeps a house warm and its water hot — properly, and without the upsell.</p>
+            <ul class="about-facts">
+              <li><strong>Gas Safe registered</strong> engineers on every job</li>
+              <li><strong>Fully insured</strong> for domestic &amp; light commercial work</li>
+              <li><strong>Fixed, upfront quotes</strong> before any work begins</li>
+              <li><strong>Local</strong> to Ashcombe and the surrounding villages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">What Ashcombe says</span>
+          <h2>Reviews from recent jobs</h2>
+          <p>A few words from customers after their most recent callout, install or repair.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">"Boiler went on a Sunday morning in January, of all times. Danny called back within the hour and had us up and running by the afternoon. Can't fault it."</p>
+            <div class="review-who"><span>Boiler repair</span><strong>Sarah M.</strong></div>
+          </div>
+          <div class="review-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">"They replumbed our whole bathroom and left it spotless every single day. Turned up on time, explained everything, no surprises on the bill."</p>
+            <div class="review-who"><span>Bathroom plumbing</span><strong>The Osei Family</strong></div>
+          </div>
+          <div class="review-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">"Had our whole central heating system replaced. Genuinely useful advice on what we actually needed rather than the most expensive option. Would use again."</p>
+            <div class="review-who"><span>Central heating</span><strong>Graham P.</strong></div>
+          </div>
+          <div class="review-card">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="quote">"Leak under the kitchen sink fixed within a couple of hours of calling. Friendly, tidy, and didn't try to sell me anything I didn't need."</p>
+            <div class="review-who"><span>Emergency callout</span><strong>Priti</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt-bg" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Get in touch</span>
+          <h2>Hours &amp; contact details</h2>
+          <p>Call, or send a message and we'll get back to you the same working day.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-col hours">
+            <h3>Opening Hours</h3>
+            <ul class="hours-list">
+              <li><span>Monday &ndash; Friday</span><strong>7:30am &ndash; 6:00pm</strong></li>
+              <li><span>Saturday</span><strong>8:00am &ndash; 1:00pm</strong></li>
+              <li><span>Sunday</span><strong>Closed</strong></li>
+            </ul>
+            <div class="hours-note">Emergency callout line answered 24/7, including outside normal hours.</div>
+          </div>
+          <div class="contact-col contact-details">
+            <h3>Contact Whitfield's</h3>
+            <div class="contact-line"><span class="k">Phone</span><a href="tel:01632960123">01632 960123</a></div>
+            <div class="contact-line"><span class="k">Address</span><span>14 Foundry Lane,<br>Ashcombe, AC4 7QP</span></div>
+            <div class="contact-line"><span class="k">Area</span><span>Ashcombe &amp; surrounding villages</span></div>
+            <a class="btn" href="tel:01632960123">Call 01632 960123</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="wrap">
+        <h2>Got a job that needs sorting?</h2>
+        <p>Whether it's an emergency or something you've been meaning to book in for a while, give us a call for a free, no-obligation quote.</p>
+        <a class="btn" href="tel:01632960123">Call 01632 960123</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Whitfield Plumbing &amp; Heating</div>
+          <p style="margin:0;max-width:34ch;">Family-run plumbing &amp; heating engineers based on Foundry Lane, Ashcombe, since 1994.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4>Site</h4>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Hours &amp; Contact</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="tel:01632960123">01632 960123</a>
+            <a href="#contact">14 Foundry Lane, Ashcombe, AC4 7QP</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Whitfield Plumbing &amp; Heating. This is a fictional example business created for demonstration purposes only.</span>
+        <span class="stride-credit">Speculative example built by STRIDE &mdash; <a href="https://stridetechnology.co.uk">stridetechnology.co.uk</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
