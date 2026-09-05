@@ -504,6 +504,72 @@
   .footer-bottom .stride-credit a{color:#e2c9a2;text-decoration:none;font-weight:600;}
   .footer-bottom .stride-credit a:hover{text-decoration:underline;}
 
+  /* ---------- Enquiry form ---------- */
+  .enquiry-form{
+    max-width:640px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:36px 40px;
+    box-shadow:var(--shadow);
+  }
+  .enquiry-form .form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+  }
+  .enquiry-form label{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    font-size:.85rem;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+  .enquiry-form input,
+  .enquiry-form select,
+  .enquiry-form textarea{
+    font:inherit;
+    font-size:.96rem;
+    color:var(--ink);
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:11px 14px;
+  }
+  .enquiry-form textarea{resize:vertical;min-height:96px;}
+  .enquiry-form input:focus,
+  .enquiry-form select:focus,
+  .enquiry-form textarea:focus{
+    outline:2px solid var(--copper);
+    outline-offset:1px;
+  }
+  .enquiry-form button.btn{
+    align-self:flex-start;
+    border:1px solid var(--copper-dark);
+    cursor:pointer;
+    font:inherit;
+    font-weight:600;
+  }
+  .enquiry-form button.btn:disabled{
+    opacity:.55;
+    cursor:not-allowed;
+    transform:none;
+  }
+  .enquiry-fallback{
+    font-size:.92rem;
+    color:var(--ink-soft);
+    background:var(--paper-alt);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 16px;
+    margin:0;
+  }
+
   /* ---------- Responsive ---------- */
   @media (max-width:900px){
     .hero-inner{grid-template-columns:1fr;padding:56px 24px 44px;}
@@ -522,6 +588,8 @@
     .phone-pill{display:none;}
     section{padding:56px 0;}
     .footer-inner{flex-direction:column;}
+    .enquiry-form{padding:26px 22px;}
+    .enquiry-form .form-row{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -541,6 +609,7 @@
         <a href="#about">About</a>
         <a href="#work">Our Work</a>
         <a href="#contact">Hours &amp; Contact</a>
+        <a href="#enquiry">Get a Quote</a>
       </nav>
       <div class="header-cta">
         <a class="phone-pill" href="tel:01632960123">
@@ -562,7 +631,7 @@
           <p class="lede">Whitfield Plumbing &amp; Heating has kept the boilers, bathrooms and pipework of Ashcombe running for over thirty years — straightforward advice, tidy work, and a real person who answers the phone.</p>
           <div class="hero-actions">
             <a class="btn" href="tel:01632960123">Call 01632 960123</a>
-            <a class="btn ghost" href="#contact">Request a callback</a>
+            <a class="btn ghost" href="#enquiry">Request a callback</a>
           </div>
           <div class="hero-stats">
             <div><span class="num">30+</span><span class="lbl">Years trading</span></div>
@@ -585,7 +654,7 @@
       <div class="wrap">
         <div class="section-head">
           <span class="kicker">What we do</span>
-          <h2>Four trades, one reliable team</h2>
+          <h2>Our services</h2>
           <p>From a dripping tap to a full heating install, we keep it in the family rather than passing you between subcontractors.</p>
         </div>
         <div class="services-grid">
@@ -713,6 +782,42 @@
         <a class="btn" href="tel:01632960123">Call 01632 960123</a>
       </div>
     </section>
+
+    <section class="alt-bg" id="enquiry">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="kicker">Send us a message</span>
+          <h2>Prefer to write it down?</h2>
+          <p>Fill in a few details below and we'll get back to you the same working day — or call 01632 960123 if it can't wait.</p>
+        </div>
+        <!-- This form is a demo of STRIDE's "Enquiry & contact forms" feature
+             (part of the Get Found & Get Enquiries foundation tier) -- it is
+             deliberately not wired to a real backend on this speculative
+             demo site. Submission is intercepted client-side (see the
+             script near the end of the page) so it fails honestly with a
+             clear message rather than silently doing nothing or pretending
+             to succeed. On a real STRIDE build this would be connected so
+             submissions land straight in the business's inbox. -->
+        <form class="enquiry-form" id="enquiry-form">
+          <div class="form-row">
+            <label>Your name<input type="text" name="name" required></label>
+            <label>Postcode or area<input type="text" name="postcode" required></label>
+          </div>
+          <label>Best way to reach you (phone or email)<input type="text" name="contact" required></label>
+          <label>How urgent is it?
+            <select name="urgency" required>
+              <option value="" selected disabled>Choose one&hellip;</option>
+              <option value="emergency">Emergency &ndash; need someone today</option>
+              <option value="few-days">Within the next few days</option>
+              <option value="quote">No rush &ndash; just after a quote</option>
+            </select>
+          </label>
+          <label>What do you need doing?<textarea name="message" rows="3" placeholder="e.g. boiler's making a banging noise and the heating keeps cutting out"></textarea></label>
+          <button type="submit" class="btn">Send enquiry</button>
+          <p class="enquiry-fallback" id="enquiry-form-fallback" hidden>Thanks — this form isn't connected yet on this demo site. On a real STRIDE build this would go straight to your inbox. For now, please call 01632 960123.</p>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -729,6 +834,7 @@
             <a href="#about">About</a>
             <a href="#work">Our Work</a>
             <a href="#contact">Hours &amp; Contact</a>
+            <a href="#enquiry">Get a Quote</a>
           </div>
           <div class="footer-col">
             <h4>Contact</h4>
@@ -742,6 +848,21 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Enquiry form isn't wired to a backend on this demo site (see the
+    // comment above the form in the HTML) -- intercept submission honestly
+    // rather than let it silently fail or 404, and point people at the
+    // phone number instead.
+    var enquiryForm = document.getElementById('enquiry-form');
+    if (enquiryForm) {
+      enquiryForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        document.getElementById('enquiry-form-fallback').hidden = false;
+        enquiryForm.querySelectorAll('input, select, textarea, button').forEach(function (el) { el.disabled = true; });
+      });
+    }
+  </script>
 
 </body>
 </html>
